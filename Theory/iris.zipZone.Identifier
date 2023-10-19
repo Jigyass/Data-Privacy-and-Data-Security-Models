@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://archive.ics.uci.edu/dataset/53/iris
+HostUrl=https://archive.ics.uci.edu/static/public/53/iris.zip
