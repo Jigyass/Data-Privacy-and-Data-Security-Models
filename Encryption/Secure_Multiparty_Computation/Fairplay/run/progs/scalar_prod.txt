@@ -1,0 +1,36 @@
+/*
+ * Compute the scalar product of two Boolean vectors held by Alice and Bob
+ */
+program ScalarProduct {
+    // Constants
+    const N = 10; // Size of each Boolean vector
+
+    // Type Definitions
+    type Bool = Int<1>; // Single-bit integer for Boolean values
+    type BooleanVector = Bool[N]; // Define a Boolean vector of size 10
+    type AliceInput = BooleanVector;
+    type BobInput = BooleanVector;
+    type ScalarProductOutput = Bool; // Single-bit integer for scalar product result
+    type Input = struct { AliceInput alice, BobInput bob };
+    type Output = struct { ScalarProductOutput result };
+
+     function Output output(Input input) {
+        var ScalarProductOutput tempResult; // Temporary variable for scalar product result
+        tempResult = 0; // Initialize scalar product result to 0
+
+        // Compute the scalar product (hard-coded for each element)
+        tempResult = tempResult | (input.alice[0] & input.bob[0]);
+        tempResult = tempResult | (input.alice[1] & input.bob[1]);
+        tempResult = tempResult | (input.alice[2] & input.bob[2]);
+        tempResult = tempResult | (input.alice[3] & input.bob[3]);
+        tempResult = tempResult | (input.alice[4] & input.bob[4]);
+        tempResult = tempResult | (input.alice[5] & input.bob[5]);
+        tempResult = tempResult | (input.alice[6] & input.bob[6]);
+        tempResult = tempResult | (input.alice[7] & input.bob[7]);
+        tempResult = tempResult | (input.alice[8] & input.bob[8]);
+        tempResult = tempResult | (input.alice[9] & input.bob[9]);
+
+        // Assign the computed result to the output structure
+        output.result = tempResult;
+    }
+}

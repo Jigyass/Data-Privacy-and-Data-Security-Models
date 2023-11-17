@@ -1,0 +1,22 @@
+0 input		//output$input.bob.vector[9]$0
+1 input		//output$input.bob.vector[8]$0
+2 input		//output$input.bob.vector[7]$0
+3 input		//output$input.bob.vector[6]$0
+4 input		//output$input.bob.vector[5]$0
+5 input		//output$input.bob.vector[4]$0
+6 input		//output$input.bob.vector[3]$0
+7 input		//output$input.bob.vector[2]$0
+8 input		//output$input.bob.vector[1]$0
+9 input		//output$input.bob.vector[0]$0
+10 input		//output$input.alice.vector[9]$0
+11 input		//output$input.alice.vector[8]$0
+12 input		//output$input.alice.vector[7]$0
+13 input		//output$input.alice.vector[6]$0
+14 input		//output$input.alice.vector[5]$0
+15 input		//output$input.alice.vector[4]$0
+16 input		//output$input.alice.vector[3]$0
+17 input		//output$input.alice.vector[2]$0
+18 input		//output$input.alice.vector[1]$0
+19 input		//output$input.alice.vector[0]$0
+20 output gate arity 1 table [ 0 1 ] inputs [ 19 ]	//output$output.aliceResult$0
+21 output gate arity 1 table [ 0 1 ] inputs [ 9 ]	//output$output.bobResult$0

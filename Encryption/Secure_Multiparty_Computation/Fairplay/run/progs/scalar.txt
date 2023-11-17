@@ -1,0 +1,23 @@
+/*
+ * Test input of two Boolean vectors of size 10, one for Alice and one for Bob
+ */
+program BooleanVectorTest {
+    const N = 10; // Size of each Boolean vector
+    type Bool = Int<1>; // Single-bit integer for Boolean values
+    type BooleanVector = Bool[N]; // Define a Boolean vector of size 10
+    type TestOutput = Bool; // Simple output type for test
+    type AliceInput = struct { BooleanVector vector };
+    type BobInput = struct { BooleanVector vector };
+    type Input = struct { AliceInput alice, BobInput bob };
+    type Output = struct { TestOutput aliceResult, TestOutput bobResult };
+
+    function Output output(Input input) {
+        var Int<8> i;
+        output.result = 0; // Initialize scalar product result to 0
+
+        // Compute the scalar product
+        for (i = 0; i < N; i++) {
+            output.result = output.result OR (input.alice.vector[i] AND input.bob.vector[i]);
+        }
+    }
+}
